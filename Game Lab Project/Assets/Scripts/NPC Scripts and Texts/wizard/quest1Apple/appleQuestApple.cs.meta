@@ -3,7 +3,12 @@ guid: 346db08ffef89d248b5d358fd3137d87
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - appleSprite: {fileID: 21300000, guid: 9ce1f5767623f08479faff2dbf5360f3, type: 3}
+  - eatenSprite: {fileID: 21300000, guid: 8f4508667aca4c644ba5a3ea5387fd89, type: 3}
+  - dialogue: {instanceID: 0}
+  - quest: {instanceID: 0}
+  - appleDialogue: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
