@@ -9,6 +9,7 @@ public class OwlMovement : MonoBehaviour {
     public Rigidbody2D rb;
 
     public SpriteRenderer sprite;
+ 
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class OwlMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (player.velocity.x > 0 && player.position.x > rb.position.x + 3)
         {
             rb.velocity = new Vector2(player.velocity.x, 0);
