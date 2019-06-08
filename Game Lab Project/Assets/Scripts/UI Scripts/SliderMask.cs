@@ -10,15 +10,17 @@ public class SliderMask : MonoBehaviour {
     private FrustrationFace frustrationFace;
 
     private float startingY = 225f;
-    private float endingY = -45f;
-    private float animTotalFrames = 30;
+    private float endingY = 100f;
+    private float animTotalFrames = 20;
     public float animCurrentFrame = 1;
     public float animTargetFrame = 1;
     private float distancePerFrame = 0;
+    private Image handle;
     
 
     public void onClick()
     {
+        handle.color = new Color(handle.color.r, handle.color.g, handle.color.b, 1f);
         animTargetFrame = animTotalFrames;
         frustrationFace.toggleDragging(true);
     }
@@ -31,6 +33,7 @@ public class SliderMask : MonoBehaviour {
         //We now move the large slider handle back to the top so it can be clicked on again
         //If we want to this can also trigger it leaving a temporary copy of itself in place so it doesn't appear to teleport back to the top as it should now
         slider.value = 0;
+        handle.color = new Color(handle.color.r, handle.color.g, handle.color.b, 0f);
     }
 
     // Use this for initialization
@@ -38,6 +41,8 @@ public class SliderMask : MonoBehaviour {
         slider = GetComponentInChildren<Slider>();
         playerStatistics = GameObject.Find(GameConst.PLAYER_OBJECT_NAME).GetComponent<PlayerStatistics>();
         frustrationFace = transform.parent.GetComponentInChildren<FrustrationFace>();
+        handle = gameObject.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Image>();
+        handle.color = new Color(handle.color.r, handle.color.g, handle.color.b, 0f);
 
         distancePerFrame = (endingY - startingY) / animTotalFrames;
     }

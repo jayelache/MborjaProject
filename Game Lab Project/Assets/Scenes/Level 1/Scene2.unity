@@ -1546,6 +1546,56 @@ Prefab:
       propertyPath: m_AnchorMin.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224613287600294038, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -21.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224613287600294038, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -19.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224594154932357434, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -257
+      objectReference: {fileID: 0}
+    - target: {fileID: 224594154932357434, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 326
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581589297081688, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581589297081688, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 224594154932357434, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460511832532996, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460511832532996, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460511832532996, guid: 71343c6d95c5adb49b187fc07af2bba8,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71343c6d95c5adb49b187fc07af2bba8, type: 2}
   m_IsPrefabAsset: 0
@@ -2048,6 +2098,7 @@ MonoBehaviour:
   player: {fileID: 1355951891}
   rb: {fileID: 808943895}
   sprite: {fileID: 808943893}
+  owlHeight: 2
 --- !u!212 &808943893
 SpriteRenderer:
   m_ObjectHideFlags: 0
