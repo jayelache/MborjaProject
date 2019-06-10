@@ -8,12 +8,14 @@ public class PlayerStatistics : MonoBehaviour {
 
     private StamLossTextManager textSpawn;
     public Checkpoint checkpoint;
-    
+    private float timeLeft = 15f;
     public float invulnTimer = 0;
     private float damageOverTime = 0;
     public float stamina = 100;
     public float maxStamina = 100;
     public float frustration = 0;
+    private bool highFrustration;
+
 
     [Tooltip("The distance a player has to walk before they take one 'GameConst.STAMINA_DRAIN_PER_DISTANCE_WALKED' worth of stamina damage")]
     public float walkDistanceToDamageStam = 4.0f;
@@ -170,6 +172,24 @@ public class PlayerStatistics : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //frustration level check for timing of hints and breaks
+        //if the frustration is over 70 there is a 15 second time(as of right now) that tells when a hint should pop up
+        if(frustration >= 70f && timeLeft > 0f)
+        {
+            highFrustration = true;
+            timeLeft -= Time.deltaTime;
+        }
+        if (frustration < 70f)
+        {
+            highFrustration = false;
+            timeLeft = 15f;
+        }
+        if(timeLeft <= 0)
+        {
+            Debug.Log("Frustration High");
+            timeLeft = 15f;
+        }
+
 
         if (invulnTimer > 0)
         {

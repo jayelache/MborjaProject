@@ -9,8 +9,8 @@ public class SliderMask : MonoBehaviour {
     private PlayerStatistics playerStatistics;
     private FrustrationFace frustrationFace;
 
-    private float startingY = 225f;
-    private float endingY = 100f;
+    private float startingY = 500f;
+    private float endingY = 275f;
     private float animTotalFrames = 20;
     public float animCurrentFrame = 1;
     public float animTargetFrame = 1;
