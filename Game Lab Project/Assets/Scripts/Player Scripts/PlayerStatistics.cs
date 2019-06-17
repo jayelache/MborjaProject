@@ -15,6 +15,8 @@ public class PlayerStatistics : MonoBehaviour {
     public float maxStamina = 100;
     public float frustration = 0;
     private bool highFrustration;
+    public GameObject breakSpeech;
+    private int frustrationCount;
 
 
     [Tooltip("The distance a player has to walk before they take one 'GameConst.STAMINA_DRAIN_PER_DISTANCE_WALKED' worth of stamina damage")]
@@ -158,6 +160,24 @@ public class PlayerStatistics : MonoBehaviour {
         checkpoint = newCheckpoint;
     }
 
+    IEnumerator BreakTimer()
+    {
+        breakSpeech.SetActive(true);
+        Time.timeScale = 0.0f;
+        yield return WaitForUnscaledSeconds(5f);
+        breakSpeech.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+    IEnumerator WaitForUnscaledSeconds(float dur)
+    {
+        var cur = 0f;
+        while (cur < dur)
+        {
+            yield return null;
+            cur += Time.unscaledDeltaTime;
+        }
+    }
+
 
 
 
@@ -168,6 +188,7 @@ public class PlayerStatistics : MonoBehaviour {
         //Checkpoint = new Checkpoint(gameObject.transform.position);
         positionLastFrame = transform.position;
 	}
+
 
     // Update is called once per frame
     void Update()
@@ -186,8 +207,15 @@ public class PlayerStatistics : MonoBehaviour {
         }
         if(timeLeft <= 0)
         {
+            //hint here
             Debug.Log("Frustration High");
+            frustrationCount++;
             timeLeft = 15f;
+        }
+        if(frustrationCount >= 3 && !breakSpeech.activeInHierarchy)
+        {
+            StartCoroutine(BreakTimer());
+            frustrationCount = 0;
         }
 
 
