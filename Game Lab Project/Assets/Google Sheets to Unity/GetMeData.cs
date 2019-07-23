@@ -24,18 +24,24 @@ public class GetMeData : MonoBehaviour {
         {
             "A",
             "B",
-            "",
             "D"
         };
+        //SpreadsheetManager.Append(new GSTU_Search(SHEET_ID, SHEET_NAME), new ValueRange(values), null);
 
-        List<string> list2 = new List<string>()
+        List<List<string>> values = new List<List<string>>();
+
+        for (int i=0; i<50000; i++)
         {
-            "",
-            "2",
-            "3"
-        };
 
-        List<List<string>> values = new List<List<string>>() { list1, list2 };
+            List<string> list2 = new List<string>()
+            {
+                i.ToString(),
+                (i+1).ToString(),
+                (i+2).ToString()
+            };
+
+            values.Add(list2);
+        }
 
         SpreadsheetManager.Append(new GSTU_Search(SHEET_ID, SHEET_NAME), new ValueRange(values), null);
 

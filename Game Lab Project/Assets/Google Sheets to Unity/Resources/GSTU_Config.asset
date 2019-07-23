@@ -18,7 +18,7 @@ MonoBehaviour:
   API_Key: 
   PORT: 1984
   gdr:
-    access_token: ya29.GltOB2_VTXSh3t3FCRgh_RGM_TrjnHGdxm3DUigXm2j_-aNIw_U3QE5SUcCpwjCCMmj80ZWdurbuymd6M-KboeLtAZnoM_8VputS8qmiRIPHlpVZ6TfjAiz3AXe4
-    refresh_token: 1/4txrUH83KguqXrGTf21pnRKpoOx4WMaghvqhXkrgf48
+    access_token: ya29.GltOB2ft0udrObRMq75zzHxQghvUUz54GH_igu9qJtd2DnsOc1lhA4jXwAXdq68yr3nkDdjtpxVx1YkTQzfCS6sCTrAIzx1BWcGd9ls9KmtFWDc7serv0njuPvgI
+    refresh_token: 1/_IiCPSLaJqNKXTHyH4W0ow1hwfaUSOFm2hxH5_FZnhc
     token_type: Bearer
     expires_in: 3600
